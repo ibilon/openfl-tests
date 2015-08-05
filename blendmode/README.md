@@ -9,7 +9,7 @@ openfl (3.2.2) https://github.com/openfl/openfl/commit/c1500601d1a90779490632fc8
 | BlendMode/Target | Neko next | Neko legacy | Html5 dom | Html5 canvas | Html5 webgl |
 |------------------|-----------|-------------|-----------|--------------|-------------|
 | ADD              | WORKS     |             |           |              | WORKS       |
-| ALPHA            |           | WORKS       |           |              |             |
+| ALPHA            |           | WORKS?      |           |              |             |
 | DARKEN           |           |             |           |              |             |
 | DIFFERENCE       |           |             |           |              |             |
 | HARDLIGHT        |           |             |           |              |             |
@@ -19,4 +19,4 @@ openfl (3.2.2) https://github.com/openfl/openfl/commit/c1500601d1a90779490632fc8
 | MULTIPLY         | WORKS     |             |           |              | WORKS       |
 | OVERLAY          |           |             |           |              |             |
 | SCREEN           |           |             |           |              |             |
-| SUBTRACT         | WORKS     |             |           |              |             |
+| SUBTRACT         | WORKS     |             |           |              | WORKS       |
