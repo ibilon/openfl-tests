@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="OpenFL Blend Mode test" package="blendmode" version="1.0.0" company="" />
+
+ 	<app file="Main" main="Main" path="bin" />
+
+	<window fps="30" background="0x330000" />
+	<window width="800" height="600" resizable="false" />
+	
+	<source path="." />
+	
+	<haxelib name="openfl" />
+
+	<assets path="assets" include="*.png" />
+</project>
