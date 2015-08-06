@@ -1,0 +1,12 @@
+package openfl.display;
+
+extern enum StageAlign {
+	TOP_RIGHT;
+	TOP_LEFT;
+	TOP;
+	RIGHT;
+	LEFT;
+	BOTTOM_RIGHT;
+	BOTTOM_LEFT;
+	BOTTOM;
+}

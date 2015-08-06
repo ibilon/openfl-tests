@@ -1,0 +1,42 @@
+package openfl.display3D;
+
+extern class Context3D {
+	var driverInfo(default,null) : String;
+	var enableErrorChecking : Bool;
+	function new() : Void;
+	function clear(red : Float = 0, green : Float = 0, blue : Float = 0, alpha : Float = 0, depth : Float = 0, stencil : Int = 0, mask : Int = 0) : Void;
+	function configureBackBuffer(width : Int, height : Int, antiAlias : Int, enableDepthAndStencil : Bool = false) : Void;
+	function createCubeTexture(size : Int, format : Context3DTextureFormat, optimizeForRenderToTexture : Bool, streamingLevels : Int = 0) : openfl.display3D.textures.CubeTexture;
+	function createIndexBuffer(numIndices : Int) : IndexBuffer3D;
+	function createProgram() : Program3D;
+	function createRectangleTexture(width : Int, height : Int, format : Context3DTextureFormat, optimizeForRenderToTexture : Bool) : openfl.display3D.textures.RectangleTexture;
+	function createTexture(width : Int, height : Int, format : Context3DTextureFormat, optimizeForRenderToTexture : Bool, streamingLevels : Int = 0) : openfl.display3D.textures.Texture;
+	function createVertexBuffer(numVertices : Int, data32PerVertex : Int) : VertexBuffer3D;
+	function dispose() : Void;
+	function drawToBitmapData(destination : openfl.display.BitmapData) : Void;
+	function drawTriangles(indexBuffer : IndexBuffer3D, firstIndex : Int = 0, numTriangles : Int = 0) : Void;
+	function present() : Void;
+	function removeRenderMethod(func : openfl.events.Event -> Void) : Void;
+	function setBlendFactors(sourceFactor : Int, destinationFactor : Int) : Void;
+	function setColorMask(red : Bool, green : Bool, blue : Bool, alpha : Bool) : Void;
+	function setCulling(triangleFaceToCull : Int) : Void;
+	function setDepthTest(depthMask : Bool, passCompareMode : Int) : Void;
+	function setGLSLProgramConstantsFromByteArray(locationName : String, data : openfl.utils.ByteArray, byteArrayOffset : Int = 0) : Void;
+	function setGLSLProgramConstantsFromMatrix(locationName : String, matrix : openfl.geom.Matrix3D, transposedMatrix : Bool = false) : Void;
+	function setGLSLProgramConstantsFromVector4(locationName : String, data : Array<Float>, startIndex : Int = 0) : Void;
+	function setGLSLTextureAt(locationName : String, texture : openfl.display3D.textures.TextureBase, textureIndex : Int) : Void;
+	function setGLSLVertexBufferAt(locationName : String, buffer : VertexBuffer3D, bufferOffset : Int = 0, ?format : Context3DVertexBufferFormat) : Void;
+	function setProgram(program3D : Program3D) : Void;
+	function setProgramConstantsFromByteArray(programType : Context3DProgramType, firstRegister : Int, numRegisters : Int, data : openfl.utils.ByteArray, byteArrayOffset : Int) : Void;
+	function setProgramConstantsFromMatrix(programType : Context3DProgramType, firstRegister : Int, matrix : openfl.geom.Matrix3D, transposedMatrix : Bool = false) : Void;
+	function setProgramConstantsFromVector(programType : Context3DProgramType, firstRegister : Int, data : Array<Float>, numRegisters : Int = 0) : Void;
+	function setRenderMethod(func : openfl.events.Event -> Void) : Void;
+	function setRenderToBackBuffer() : Void;
+	function setRenderToTexture(texture : openfl.display3D.textures.TextureBase, enableDepthAndStencil : Bool = false, antiAlias : Int = 0, surfaceSelector : Int = 0) : Void;
+	function setSamplerStateAt(sampler : Int, wrap : Context3DWrapMode, filter : Context3DTextureFilter, mipfilter : Context3DMipFilter) : Void;
+	function setScissorRectangle(rectangle : openfl.geom.Rectangle) : Void;
+	function setStencilActions(triangleFace : Null<Int> = 0, compareMode : Null<Int> = 0, actionOnBothPass : Null<Int> = 0, actionOnDepthFail : Null<Int> = 0, actionOnDepthPassStencilFail : Null<Int> = 0) : Void;
+	function setStencilReferenceValue(referenceValue : Int, readMask : Int = 0, writeMask : Int = 0) : Void;
+	function setTextureAt(sampler : Int, texture : openfl.display3D.textures.TextureBase) : Void;
+	function setVertexBufferAt(index : Int, buffer : VertexBuffer3D, bufferOffset : Int = 0, ?format : Context3DVertexBufferFormat) : Void;
+}

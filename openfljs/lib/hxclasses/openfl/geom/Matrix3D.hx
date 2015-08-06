@@ -1,0 +1,42 @@
+package openfl.geom;
+
+extern class Matrix3D {
+	var determinant(get,null) : Float;
+	var position(get,set) : Vector3D;
+	var rawData : openfl.Vector<Float>;
+	function new(?v : openfl.Vector<Float>) : Void;
+	function append(lhs : Matrix3D) : Void;
+	function appendRotation(degrees : Float, axis : Vector3D, ?pivotPoint : Vector3D) : Void;
+	function appendScale(xScale : Float, yScale : Float, zScale : Float) : Void;
+	function appendTranslation(x : Float, y : Float, z : Float) : Void;
+	function clone() : Matrix3D;
+	function copyColumnFrom(column : Int, vector3D : Vector3D) : Void;
+	function copyColumnTo(column : Int, vector3D : Vector3D) : Void;
+	function copyFrom(other : Matrix3D) : Void;
+	function copyRawDataFrom(vector : openfl.Vector<Float>, index : UInt = 0, transpose : Bool = false) : Void;
+	function copyRawDataTo(vector : openfl.Vector<Float>, index : UInt = 0, transpose : Bool = false) : Void;
+	function copyRowFrom(row : UInt, vector3D : Vector3D) : Void;
+	function copyRowTo(row : Int, vector3D : Vector3D) : Void;
+	function copyToMatrix3D(other : Matrix3D) : Void;
+	function decompose(?orientationStyle : Orientation3D) : openfl.Vector<Vector3D>;
+	function deltaTransformVector(v : Vector3D) : Vector3D;
+	@:noCompletion function get_determinant() : Float;
+	@:noCompletion function get_position() : Vector3D;
+	function identity() : Void;
+	function interpolateTo(toMat : Matrix3D, percent : Float) : Void;
+	function invert() : Bool;
+	function pointAt(pos : Vector3D, ?at : Vector3D, ?up : Vector3D) : Void;
+	function prepend(rhs : Matrix3D) : Void;
+	function prependRotation(degrees : Float, axis : Vector3D, ?pivotPoint : Vector3D) : Void;
+	function prependScale(xScale : Float, yScale : Float, zScale : Float) : Void;
+	function prependTranslation(x : Float, y : Float, z : Float) : Void;
+	function recompose(components : openfl.Vector<Vector3D>, ?orientationStyle : Orientation3D) : Bool;
+	@:noCompletion function set_position(val : Vector3D) : Vector3D;
+	function transformVector(v : Vector3D) : Vector3D;
+	function transformVectors(vin : openfl.Vector<Float>, vout : openfl.Vector<Float>) : Void;
+	function transpose() : Void;
+	static function create2D(x : Float, y : Float, scale : Float = 0, rotation : Float = 0) : Matrix3D;
+	static function createABCD(a : Float, b : Float, c : Float, d : Float, tx : Float, ty : Float) : Matrix3D;
+	static function createOrtho(x0 : Float, x1 : Float, y0 : Float, y1 : Float, zNear : Float, zFar : Float) : Matrix3D;
+	static function interpolate(thisMat : Matrix3D, toMat : Matrix3D, percent : Float) : Matrix3D;
+}

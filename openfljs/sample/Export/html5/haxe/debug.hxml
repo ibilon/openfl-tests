@@ -1,0 +1,21 @@
+-main ApplicationMain 
+-cp /home/ibilon/Code/Haxelibs/openfl
+-D openfl=3.2.2
+-cp /home/ibilon/Code/Haxelibs/lime
+-D lime=2.5.2
+-cp Source
+-D openfl-next
+-D tools=2.5.2
+-D no-compilation
+-D lime-opengl
+-D openfl-html5
+-D canvas
+-D lime-html5
+-D html5
+-D web
+--remap flash:openfl
+-js Export/html5/bin/DisplayingABitmap.js
+-cp Export/html5/haxe
+-D html5
+--macro allowPackage("flash")
+-debug

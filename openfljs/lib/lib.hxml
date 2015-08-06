@@ -1,0 +1,18 @@
+-lib openfl
+-D openfl=3.2.2
+-lib lime
+-D lime=2.5.2
+-D openfl-next
+-D tools=2.5.2
+-D lime-opengl
+-D openfl-html5
+-D webgl
+-D lime-html5
+-D html5
+-D web
+--remap flash:openfl
+--macro allowPackage("flash")
+--macro include("openfl")
+-dce no
+-js openfl.js
+--gen-hx-classes

@@ -1,0 +1,48 @@
+package lime.utils;
+
+@:autoBuild(lime.Assets.embedFile()) extern class ByteArray {
+	var byteView : js.html.Uint8Array;
+	var bytesAvailable(get,null) : Int;
+	var endian(get,set) : String;
+	var length(default,set) : Int;
+	var objectEncoding : Int;
+	var position : Int;
+	function new(size : Int = 0) : Void;
+	@:keep function __get(pos : Int) : Int;
+	function __getBuffer() : js.html.ArrayBuffer;
+	@:keep function __set(pos : Int, v : Int) : Void;
+	function clear() : Void;
+	function compress(?algorithm : CompressionAlgorithm) : Void;
+	function deflate() : Void;
+	function inflate() : Void;
+	function readBoolean() : Bool;
+	function readByte() : Int;
+	function readBytes(bytes : ByteArray, offset : Int = 0, length : Int = 0) : Void;
+	function readDouble() : Float;
+	function readFloat() : Float;
+	function readInt() : Int;
+	function readMultiByte(length : Int, charSet : String) : String;
+	function readShort() : Int;
+	function readUTF() : String;
+	function readUTFBytes(len : Int) : String;
+	function readUnsignedByte() : Int;
+	function readUnsignedInt() : Int;
+	function readUnsignedShort() : Int;
+	function toString() : String;
+	function uncompress(?algorithm : CompressionAlgorithm) : Void;
+	function writeBoolean(value : Bool) : Void;
+	function writeByte(value : Int) : Void;
+	function writeBytes(bytes : ByteArray, offset : UInt = 0, length : UInt = 0) : Void;
+	function writeDouble(x : Float) : Void;
+	function writeFile(path : String) : Void;
+	function writeFloat(x : Float) : Void;
+	function writeInt(value : Int) : Void;
+	function writeShort(value : Int) : Void;
+	function writeUTF(value : String) : Void;
+	function writeUTFBytes(value : String) : Void;
+	function writeUnsignedInt(value : Int) : Void;
+	function writeUnsignedShort(value : Int) : Void;
+	@:has_untyped static function __ofBuffer(buffer : ArrayBuffer) : ByteArray;
+	static function fromBytes(bytes : haxe.io.Bytes) : ByteArray;
+	static function readFile(path : String) : ByteArray;
+}

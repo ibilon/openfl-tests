@@ -1,0 +1,42 @@
+package openfl.media;
+
+@:realPath("openfl.media.SoundJS") @:native("createjs.Sound") extern class SoundJS {
+	static var DELIMITER : String;
+	static var INTERRUPT_ANY(inline,never) : String;
+	static var INTERRUPT_EARLY(inline,never) : String;
+	static var INTERRUPT_LATE(inline,never) : String;
+	static var INTERRUPT_NONE(inline,never) : String;
+	static var PLAY_FAILED : String;
+	static var PLAY_FINISHED : String;
+	static var PLAY_INITED : String;
+	static var PLAY_INTERRUPTED : String;
+	static var PLAY_SUCCEEDED : String;
+	static var SUPPORTED_EXTENSIONS : Array<String>;
+	static var activePlugin : Dynamic;
+	static var alternateExtensions : Array<String>;
+	static var defaultInterruptBehavior : String;
+	static function addEventListener(type : String, listener : Dynamic, useCapture : Null<Bool> = false) : Dynamic;
+	static function createInstance(src : String) : SoundJSInstance;
+	static function dispatchEvent(eventObj : Dynamic, ?target : Dynamic) : Bool;
+	static function getCapabilities() : Dynamic;
+	static function getCapability(key : String) : Dynamic;
+	static function getMute() : Bool;
+	static function getVolume() : Float;
+	static function hasEventListener(type : String) : Bool;
+	static function initializeDefaultPlugins() : Bool;
+	static function isReady() : Bool;
+	static function loadComplete(src : String) : Bool;
+	static function play(src : String, ?interrupt : String, delay : Null<Int> = 0, offset : Null<Int> = 0, loop : Null<Int> = 0, volume : Null<Float> = 0, pan : Null<Float> = 0) : SoundJSInstance;
+	static function registerManifest(manifest : Array<Dynamic>, basepath : String) : Dynamic;
+	static function registerPlugin(plugin : Dynamic) : Bool;
+	static function registerPlugins(plugins : Array<Dynamic>) : Bool;
+	static function registerSound(src : String, ?id : String, data : Null<Float> = 0, preload : Null<Bool> = false) : Dynamic;
+	static function removeAllEventListeners(?type : String) : Void;
+	static function removeAllSounds() : Void;
+	static function removeEventListener(type : String, listener : Dynamic, useCapture : Null<Bool> = false) : Void;
+	static function removeManifest(manifest : Array<Dynamic>) : Dynamic;
+	static function removeSound(src : String) : Void;
+	static function setMute(value : Bool) : Bool;
+	static function setVolume(value : Float) : Void;
+	static function stop() : Void;
+}
