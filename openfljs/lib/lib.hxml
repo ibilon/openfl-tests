@@ -13,6 +13,6 @@
 --remap flash:openfl
 --macro allowPackage("flash")
 --macro include("openfl")
--dce no
+-dce std
 -js openfl.js
---gen-hx-classes
+#--macro haxe.macro.ExampleJSGenerator.use()

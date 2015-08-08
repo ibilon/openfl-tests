@@ -22,3 +22,4 @@
 -D final
 -D js-flatten
 -dce full
+--macro Macros.allExternInLib()
